@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+
+:root{
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --cyan2: hsla(178, 100%, 50%, 0.63);
+    --main-bg: hsl(217, 54%, 11%);
+    --card-bg: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--main-bg);
+    
+}
+
+.container{
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.wrapper{ 
+    margin: 2rem 1rem;
+    padding: 20px;
+    box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.185);
+    border-radius: 15px;
+    background-color: var(--card-bg);
+}
+
+.img-top{
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+.img-top img{
+    width: 100%;
+    display: block;
+}
+
+.img-overlay{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--cyan2);
+  
+}
+
+.img-overlay img {
+    position: absolute;
+    width: 50px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.img-top:hover .img-overlay{
+    display: block;
+    cursor: pointer;
+}
+
+.card-text a{
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 20px 0;
+    display: inline-block;
+    color: var(--white);
+}
+
+.card-text a:hover{
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+p{
+    color: var(--soft-blue);
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 0;
+
+}
+
+.eth, .days{
+    display: flex;
+    align-items: center;
+}
+
+.eth p{
+    font: 600;
+    padding-left: 7px;
+    color: var(--cyan);
+}
+
+.days p{
+    padding-left: 7px;
+}
+
+hr{
+    border-color: var(--line);
+}
+
+.footer-card{
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.footer-card img{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid var(--white);
+    margin-right: 15px;
+}
+
+.footer-card a{
+    font-size: 16px;
+}
+
+.footer-card:hover{
+    color: var(--cyan);
+}
